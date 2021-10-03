@@ -23,8 +23,8 @@ Route::get('/page1', function () {
 });
 
 
-Route::get('/', [PagesController::class, 'pageCheck']);
-Route::get('/contactus', [PagesController::class, 'pageContact']);
-Route::get('product/service', [PagesController::class, 'pageService']);
-Route::get('/teams', [PagesController::class, 'pageTeams']);
-Route::get('/aboutus', [PagesController::class, 'pageAbout']);
+Route::get('/', [PagesController::class, 'pageCheck'])->name('Home');
+Route::get('/contact', [PagesController::class, 'pageContact'])->name('Contact');
+Route::get('service', [PagesController::class, 'pageService'])->name('Service');
+Route::get('/teams', [PagesController::class, 'pageTeams'])->name('Teams');
+Route::get('/aboutus', [PagesController::class, 'pageAbout'])->name('About');

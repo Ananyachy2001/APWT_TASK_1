@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function pageCheck(){
-        return view('landingpage');
+        return view('page.index.landingpage');
     }
 
 
@@ -16,7 +16,17 @@ class PagesController extends Controller
     }
 
     public function pageService(){
-        return view('servicepage');
+        $title = "Hello";
+        $des = "This is a description";
+
+        $data = [ 
+            'itemOne' => "Mobile",
+            'itemTwo' => "Laptop",
+            'itemThree' => "Tablet",
+            'itemFour' => "AirPods",
+        ];
+
+        return view('product.servicepage')->with('data',$data);
     }
 
     public function pageAbout(){
